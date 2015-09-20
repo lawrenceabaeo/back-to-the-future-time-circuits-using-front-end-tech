@@ -1,0 +1,137 @@
+/***** NOTES *****/
+// Ratio: 
+// http://alistapart.com/d/creating-intrinsic-ratios-for-video/example2.html
+// went with the mademyday one:
+// https://css-tricks.com/easier-aspect-ratio-elements/
+// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+
+// another technique: 
+// http://stackoverflow.com/questions/18296378/how-to-keep-a-div-contained-within-the-viewport-whilst-maintaining-aspect-ratio
+
+/***** SASS *****/
+@mixin debug {
+  border: 1px solid red;
+}
+
+
+/***** FONTS *****/
+@font-face {
+  // http://www.dafont.com/lcd-lcd-mono.font
+  // ok, this one's a little different
+  font-family: 'LCDM2B__'; 
+  src: url('../font/LCDM2B__.ttf');
+}
+// http://www.1001fonts.com/digital+clock-fonts.html
+// http://www.1001fonts.com/digital-7-font.html
+
+@font-face {
+  // http://fontsup.com/font/microgramma-d-ot-bold-extended.html
+  font-family: 'Microgramma-D-OT-Bold-Extended_30403';
+  src: url('../font/Microgramma-D-OT-Bold-Extended_30403.ttf');
+}
+
+
+/***** *****/
+// https://css-tricks.com/international-box-sizing-awareness-day/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: table;
+}
+
+.overall-container {
+  // vertical centering
+  // from http://stackoverflow.com/a/17521229/4771469
+  display: table-cell;
+  vertical-align: middle;  
+  border: 5px solid purple;
+}
+
+.individual-time-circuit-wrapper-area {
+  // NOTE: only need margin auto with a fixed width
+  margin-left: auto;
+  margin-right: auto;
+  // NOTE: only need margin pixels when using dynamic width
+  // margin-right: 10px;
+  // margin-left: 10px;
+  // min-width: 480px;
+  // max-width: 1000px;
+  width: 960px;
+  position: relative;
+  @include debug;
+}
+
+// .individual-time-circuit-wrapper-area:before {
+.individual-time-circuit-wrapper-area:after {
+  content: "";
+  display: block;
+  padding-top: 21%;
+}
+
+.individual-time-circuit-content {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+
+.destination-time-circuit-wrapper-area {
+  
+}
+
+.destination-time-circuit-area {
+  
+}
+
+.present-time-circuit-area {
+  
+}
+
+.last-time-departed-area {
+  
+}
+
+.sticker-label, .footer-label {
+  font-family: 'Microgramma-D-OT-Bold-Extended_30403';
+}
+
+.sticker-label {
+  display: inline-block;
+  background-color: aqua;
+  color: white;
+  border: 1px solid red;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.footer-label {
+  background-color: black;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.console-display {
+  display: inline-block;
+}
+
+.lcd {
+  background-color: black;
+  font-family: 'LCDM2B__';
+  color: red;
+  font-size: 6em;
+  padding-top: 12px;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: 10px;
+  line-height: 80px;
+}
