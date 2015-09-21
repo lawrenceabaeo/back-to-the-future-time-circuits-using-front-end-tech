@@ -9,27 +9,31 @@
   font-family: 'Microgramma-D-OT-Bold-Extended_30403';
   src: url("../font/Microgramma-D-OT-Bold-Extended_30403.ttf"); }
 
+@font-face {
+  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  src: url("../font/Microgramma-D-OT-Medium-Extended_30404.ttf"); }
+
 /***** *****/
-/* line 36, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 45, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 *, *:before, *:after {
   box-sizing: border-box; }
 
-/* line 40, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 49, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 body, html {
   height: 100%;
   width: 100%; }
 
-/* line 44, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 53, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 body {
   display: table; }
 
-/* line 48, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 57, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .overall-container {
   display: table-cell;
   vertical-align: middle;
   border: 5px solid purple; }
 
-/* line 56, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 65, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-wrapper-area {
   margin-left: auto;
   margin-right: auto;
@@ -37,13 +41,13 @@ body {
   position: relative;
   border: 1px solid red; }
 
-/* line 71, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 80, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-wrapper-area:after {
   content: "";
   display: block;
   padding-top: 21%; }
 
-/* line 77, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 86, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-content {
   position: absolute;
   top: 0;
@@ -51,31 +55,35 @@ body {
   bottom: 0;
   right: 0; }
 
-/* line 102, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 111, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .sticker-label, .footer-label {
-  font-family: 'Microgramma-D-OT-Bold-Extended_30403'; }
+  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  font-weight: 600;
+  letter-spacing: 2px; }
 
-/* line 106, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 118, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .sticker-label {
   display: inline-block;
   background-color: aqua;
   color: white;
   border: 1px solid red;
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  font-size: 1.3em; }
 
-/* line 115, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 128, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .footer-label {
   background-color: black;
   color: white;
   width: 50%;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.6em; }
 
-/* line 122, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 136, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-display {
   display: inline-block; }
 
-/* line 126, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 140, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .lcd {
   background-color: black;
   font-family: 'LCDM2B__';
