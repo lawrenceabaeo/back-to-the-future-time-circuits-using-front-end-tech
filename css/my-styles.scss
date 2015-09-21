@@ -129,13 +129,6 @@ body {
   text-align: center;
   font-size: 1.5em;
 }
-.am-label, .pm-label {
-  display: inline;
-  background-color: cadetblue;
-  color: white;
-  font-size: 1.6em;
-  @include debug;
-}
 
 .destination .month { margin-left: 50px;}
 .destination .day { margin-left: 65px; }
@@ -150,14 +143,41 @@ body {
 .console-month { margin-left: 23px; }
 .console-day { margin-left: 14px; }
 .console-year { margin-left: 25px; }
-.console-am-pm { @include debug; }
 
+/***** AM PM stuff *****/
+.console-am-pm { 
+  position: relative;
+  width: 49px;
+}
+.am-label, .pm-label {
+  position: absolute;
+  left: -8px;
+  background-color: cadetblue;
+  color: white;
+  font-size: 1.5em;
+  line-height: 24px;  
+}
+.am-label {
+ bottom: 75px; 
+}
+.indicator-light.am {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+  background-color: blueviolet;
+}
+.pm-label {
+ bottom: 24px; 
+}
+.indicator-light.pm {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
 
 
 .console-colon-lights {
-  @include debug; 
   position: relative;
-  // width: 19px;
   width: 19px;
 }
 .indicator-light { 
