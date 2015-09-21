@@ -76,13 +76,12 @@ body {
   @include debug;
 }
 
-// .individual-time-circuit-wrapper-area:before {
+
 .individual-time-circuit-wrapper-area:after {
   content: "";
   display: block;
   padding-top: 21%;
 }
-
 .individual-time-circuit-content {
 	position:  absolute;
 	top: 0;
@@ -91,14 +90,6 @@ body {
 	right: 0;
 }
 
-
-.destination-time-circuit-wrapper-area {
-  
-}
-
-.destination-time-circuit-area {
-  
-}
 
 .present-time-circuit-area {
   
@@ -131,9 +122,8 @@ body {
   background-color: black;
   color: white;
   margin-top: 10px;
-  width: 50%;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 .am-label {
   display: inline;
@@ -147,6 +137,15 @@ body {
 }
 
 .pm-dot {
+}
+.destination .month { margin-left: 50px;}
+.destination .day { margin-left: 65px; }
+.destination .year { margin-left: 125px; }
+.destination .hour { margin-left: 145px; }
+.destination .min { margin-left: 65px; }
+.destination .footer-label { 
+  margin-left: 300px;
+  width: 330px;
 }
 
 .console-display {
