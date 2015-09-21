@@ -99,6 +99,10 @@ body {
   
 }
 
+.console-display {
+  display: inline-block;
+}
+
 .sticker-label, .footer-label, .am-label, .pm-label {
   // font-family: 'Microgramma-D-OT-Bold-Extended_30403';
   font-family: 'Microgramma-D-OT-Medium-Extended_30404';
@@ -125,7 +129,7 @@ body {
   text-align: center;
   font-size: 1.5em;
 }
-.am-label {
+.am-label, .pm-label {
   display: inline;
   background-color: cadetblue;
   color: white;
@@ -133,11 +137,6 @@ body {
   @include debug;
 }
 
-.am-dot {
-}
-
-.pm-dot {
-}
 .destination .month { margin-left: 50px;}
 .destination .day { margin-left: 65px; }
 .destination .year { margin-left: 125px; }
@@ -148,21 +147,39 @@ body {
   width: 330px;
 }
 
-.console-display {
-  display: inline-block;
-}
-
 .console-month { margin-left: 23px; }
 .console-day { margin-left: 14px; }
 .console-year { margin-left: 25px; }
 .console-am-pm { @include debug; }
-.colon-light { 
-  height: 17px;
-  width: 17px; 
+
+
+
+.console-colon-lights {
+  @include debug; 
+  position: relative;
+  // width: 19px;
+  width: 19px;
+}
+.indicator-light { 
+  $indicator-light-width: 17px;
+  height: $indicator-light-width;
+  width: $indicator-light-width; 
   border: 1px solid green;
   background-color: green;
   border-radius: 50%;
   margin-right: 3px;
+}
+
+.indicator-light.top {
+  position: absolute;
+  bottom: 45px;
+  right: 3px;
+  background-color: blueviolet;
+}
+.indicator-light.bottom { 
+  position: absolute;
+  right: 3px;
+  bottom: 20px;
 }
 .lcd {
   background-color: black;
