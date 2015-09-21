@@ -46,6 +46,7 @@
 }
 
 body, html {
+  background-color: black;
   height: 100%;
   width: 100%;
 }
@@ -57,8 +58,7 @@ body {
   // vertical centering
   // from http://stackoverflow.com/a/17521229/4771469
   display: table-cell;
-  vertical-align: middle;  
-  border: 5px solid purple;
+  vertical-align: middle;
 }
 
 .individual-time-circuit-wrapper-area {
@@ -72,7 +72,6 @@ body {
   // max-width: 1000px;
   width: 960px;
   position: relative;
-  @include debug;
   background-image: url("../img/Grunge_mottled_texture_insight_designs.jpg");
 }
 
