@@ -130,14 +130,25 @@ body {
   font-size: 1.5em;
 }
 
-.destination .month { margin-left: 50px;}
-.destination .day { margin-left: 65px; }
-.destination .year { margin-left: 125px; }
-.destination .hour { margin-left: 145px; }
-.destination .min { margin-left: 65px; }
+// For now, keep them even, but I eventually want to 
+// make the labels not align
+.destination .month, .present .month, .last-time-departed .month { margin-left: 50px;}
+.destination .day, .present .day, .last-time-departed .day { margin-left: 65px; }
+.destination .year, .present .year, .last-time-departed .year { margin-left: 125px; }
+.destination .hour, .present .hour, .last-time-departed .hour { margin-left: 145px; }
+.destination .min, .present .min, .last-time-departed .min { margin-left: 65px; }
 .destination .footer-label { 
   margin-left: 300px;
   width: 330px;
+}
+.present .footer-label { 
+  margin-left: 300px;
+  width: 290px;
+}
+
+.last-time-departed .footer-label { 
+  margin-left: 250px;
+  width: 400px;
 }
 
 .console-month { margin-left: 23px; }
