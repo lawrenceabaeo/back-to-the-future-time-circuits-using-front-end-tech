@@ -30,7 +30,6 @@
   src: url('../font/Microgramma-D-OT-Bold-Extended_30403.ttf');
 }
 
-
 // http://fontsup.com/font/microgramma-d-ot-medium-extended.html
 // Microgramma-D-OT-Medium-Extended_30404
 @font-face {
@@ -110,9 +109,11 @@ body {
   letter-spacing: 2px;
 }
 
+$reddish-label-color: #8e1a0a;
+
 .sticker-label {
   display: inline-block;
-  background-color: aqua;
+  background-color: $reddish-label-color;
   color: white;
   padding-left: 5px;
   padding-right: 5px;
@@ -163,7 +164,7 @@ body {
 .am-label, .pm-label {
   position: absolute;
   left: -8px;
-  background-color: cadetblue;
+  background-color: $reddish-label-color;
   color: white;
   font-size: 1.5em;
   line-height: 24px;  
@@ -191,14 +192,47 @@ body {
   position: relative;
   width: 19px;
 }
-.indicator-light { 
+.indicator-light {
   $indicator-light-width: 17px;
   height: $indicator-light-width;
   width: $indicator-light-width; 
-  border: 1px solid green;
+  // border: 1px solid green;
   background-color: green;
   border-radius: 50%;
   margin-right: 3px;
+}
+
+.destination .indicator-light.am.light-on,
+.destination .indicator-light.pm.light-on, 
+.destination .indicator-light.top, 
+.destination .indicator-light.bottom, {
+  background-color: #67FC42;
+}
+.destination .indicator-light.am.light-off,
+.destination .indicator-light.pm.light-off {
+  background-color: #3E2917;
+}
+
+.present .indicator-light.am.light-on, 
+.present .indicator-light.pm.light-on, 
+.present .indicator-light.top, 
+.present .indicator-light.bottom, {
+  background-color: #8AF250;
+}
+.present .indicator-light.am.light-off, 
+.present .indicator-light.pm.light-off {
+  background-color: #0E1510;
+}
+
+.last-time-departed .indicator-light.am.light-on, 
+.last-time-departed .indicator-light.pm.light-on, 
+.last-time-departed .indicator-light.top, 
+.last-time-departed .indicator-light.bottom, {
+  background-color: #F4DF5C;
+}
+.last-time-departed .indicator-light.am.light-off, 
+.last-time-departed .indicator-light.pm.light-off {
+  background-color: #22130E;
 }
 
 .indicator-light.top {
@@ -227,3 +261,7 @@ body {
   margin-right: 10px;
   line-height: 80px;
 }
+
+.destination .lcd { color: #FF6410; }
+.present .lcd { color: #67FC42; }
+.last-time-departed .lcd { color: #F4CE26 ; }
