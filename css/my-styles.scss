@@ -108,7 +108,7 @@ body {
   
 }
 
-.sticker-label, .footer-label {
+.sticker-label, .footer-label, .am-label, .pm-label {
   // font-family: 'Microgramma-D-OT-Bold-Extended_30403';
   font-family: 'Microgramma-D-OT-Medium-Extended_30404';
   font-weight: 600;
@@ -119,33 +119,64 @@ body {
   display: inline-block;
   background-color: aqua;
   color: white;
-  border: 1px solid red;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 1.3em;
+  margin-top: 17px;
+  // NOTE: the stickers are placed by hand in the movie and
+  // are visually not perfect, may need to introduce that here somehows
 }
 
 .footer-label {
   background-color: black;
   color: white;
+  margin-top: 10px;
   width: 50%;
   text-align: center;
   font-size: 1.6em;
+}
+.am-label {
+  display: inline;
+  background-color: cadetblue;
+  color: white;
+  font-size: 1.6em;
+  @include debug;
+}
+
+.am-dot {
+}
+
+.pm-dot {
 }
 
 .console-display {
   display: inline-block;
 }
 
+.console-month { margin-left: 23px; }
+.console-day { margin-left: 14px; }
+.console-year { margin-left: 25px; }
+.console-am-pm { @include debug; }
+.colon-light { 
+  height: 17px;
+  width: 17px; 
+  border: 1px solid green;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 3px;
+}
 .lcd {
   background-color: black;
   font-family: 'LCDM2B__';
   color: red;
   font-size: 6em;
+  // NOTE: These numbers will likely change
+  // if a bezel is introduced
   padding-top: 12px;
   padding-bottom: 0px;
-  padding-right: 3px;
-  padding-left: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 11px;
   margin-right: 10px;
   line-height: 80px;
 }
