@@ -231,8 +231,9 @@ body {
 /* line 249, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .lcd {
   background-color: black;
-  font-family: 'LCDM2B__';
+  border-style: inset;
   color: red;
+  font-family: 'LCDM2B__';
   font-size: 6em;
   padding-top: 12px;
   padding-bottom: 0px;
@@ -242,15 +243,15 @@ body {
   margin-right: 10px;
   line-height: 80px; }
 
-/* line 265, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 267, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .lcd {
   color: #FF6410; }
 
-/* line 266, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 268, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .lcd {
   color: #67FC42; }
 
-/* line 267, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 269, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .lcd {
   color: #F4CE26; }
 

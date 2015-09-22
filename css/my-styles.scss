@@ -248,8 +248,9 @@ $reddish-label-color: #8e1a0a;
 }
 .lcd {
   background-color: black;
-  font-family: 'LCDM2B__';
+  border-style:inset;
   color: red;
+  font-family: 'LCDM2B__';
   font-size: 6em;
   // NOTE: These numbers will likely change
   // if a bezel is introduced
@@ -260,6 +261,7 @@ $reddish-label-color: #8e1a0a;
   margin-top: 11px;
   margin-right: 10px;
   line-height: 80px;
+  
 }
 
 .destination .lcd { color: #FF6410; }
