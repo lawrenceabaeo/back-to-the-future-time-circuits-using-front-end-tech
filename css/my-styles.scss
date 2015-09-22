@@ -81,6 +81,7 @@ body {
   border-right-width: 5px;
   border-bottom-style: inset;
   border-bottom-color: gray;
+  border-radius: 3px;
   
 }
 
@@ -216,10 +217,14 @@ $reddish-label-color: #8e1a0a;
 .destination .indicator-light.top, 
 .destination .indicator-light.bottom, {
   background-color: #67FC42;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #67FC42 0 2px 12px;
 }
 .destination .indicator-light.am.light-off,
 .destination .indicator-light.pm.light-off {
   background-color: #3E2917;
+  // background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
 
 .present .indicator-light.am.light-on, 
@@ -227,10 +232,14 @@ $reddish-label-color: #8e1a0a;
 .present .indicator-light.top, 
 .present .indicator-light.bottom, {
   background-color: #8AF250;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
 }
 .present .indicator-light.am.light-off, 
 .present .indicator-light.pm.light-off {
   background-color: #0E1510;
+  background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
 
 .last-time-departed .indicator-light.am.light-on, 
@@ -238,23 +247,40 @@ $reddish-label-color: #8e1a0a;
 .last-time-departed .indicator-light.top, 
 .last-time-departed .indicator-light.bottom, {
   background-color: #F4DF5C;
+  // box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #F4DF5C 0 2px 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
 }
 .last-time-departed .indicator-light.am.light-off, 
 .last-time-departed .indicator-light.pm.light-off {
-  background-color: #22130E;
+  // background-color: #AA0;
+  background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
 
 .indicator-light.top {
   position: absolute;
   bottom: 45px;
   right: 3px;
-  background-color: blueviolet;
 }
 .indicator-light.bottom { 
   position: absolute;
   right: 3px;
   bottom: 20px;
 }
+
+// http://phantombear.net/omg-css-leds/
+/** 
+.led-green {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+}
+**/
+
 .lcd {
   background-color: black;
   border-style:inset;
