@@ -106,15 +106,6 @@ body {
 	right: 0;
 }
 
-
-.present-time-circuit-area {
-  
-}
-
-.last-time-departed-area {
-  
-}
-
 .console-display {
   display: inline-block;
 }
@@ -254,7 +245,6 @@ $reddish-label-color: #8e1a0a;
 .last-time-departed .indicator-light.top, 
 .last-time-departed .indicator-light.bottom, {
   background-color: #F4DF5C;
-  // box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #F4DF5C 0 2px 12px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
 }
 .last-time-departed .indicator-light.am.light-off, 
@@ -275,18 +265,8 @@ $reddish-label-color: #8e1a0a;
   right: 3px;
   bottom: 20px;
 }
-
 // http://phantombear.net/omg-css-leds/
-/** 
-.led-green {
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #ABFF00;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
-}
-**/
+
 
 .lcd {
   background-color: black;
