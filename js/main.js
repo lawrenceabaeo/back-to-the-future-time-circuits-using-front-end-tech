@@ -18,7 +18,7 @@ function presentTimeDisplayText() {
   var mon = currentDate.format("MMM").toUpperCase();
   var day = currentDate.format("DD");
   var year = currentDate.format("YYYY");
-  var hour = currentDate.format("HH");
+  var hour = currentDate.format("hh");
   var min = currentDate.format("mm");
   $(".present .console-month").text(mon);
   $(".present .console-day").text(day);
