@@ -180,14 +180,23 @@ $reddish-label-color: #8e1a0a;
 .am-label {
  bottom: 75px; 
 }
+.pm-label {
+ bottom: 24px; 
+}
+
+/***** Indicator light (LED style) stuff ****/
+// http://phantombear.net/omg-css-leds/
+.indicator-light {
+  $indicator-light-width: 17px;
+  height: $indicator-light-width;
+  width: $indicator-light-width;
+  border-radius: 50%;
+  margin-right: 3px; // why is this here?
+}
 .indicator-light.am {
   position: absolute;
   bottom: 55px;
   left: 5px;
-  background-color: blueviolet;
-}
-.pm-label {
- bottom: 24px; 
 }
 .indicator-light.pm {
   position: absolute;
@@ -195,26 +204,27 @@ $reddish-label-color: #8e1a0a;
   left: 5px;
 }
 
-
 .console-colon-lights {
   position: relative;
   width: 19px;
 }
-.indicator-light {
-  $indicator-light-width: 17px;
-  height: $indicator-light-width;
-  width: $indicator-light-width; 
-  // border: 1px solid green;
-  background-color: green;
-  border-radius: 50%;
-  margin-right: 3px;
+.console-colon-lights .top {
+  position: absolute;
+  bottom: 45px;
+  right: 3px;
+}
+.console-colon-lights .bottom { 
+  position: absolute;
+  right: 3px;
+  bottom: 20px;
 }
 
+
+/***** Lights for destination time *****/
 .destination .indicator-light.am.light-on,
 .destination .indicator-light.pm.light-on, 
-.destination .indicator-light.top, 
-.destination .indicator-light.bottom, {
-  // background-color: #67FC42;
+.destination .console-colon-lights .top, 
+.destination .console-colon-lights .bottom {
   background-color: #EFF288;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px;
 }
@@ -225,11 +235,46 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
+/***** Blink the hours minutes destination lights *****/
+.destination .console-colon-lights .top, 
+.destination .console-colon-lights .bottom {
+  -webkit-animation: blinkDestinationLights 2s step-start infinite;
+          animation: blinkDestinationLights 2s step-start infinite;
+}
+@-webkit-keyframes blinkDestinationLights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
+  }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkDestinationLights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
+  }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
 
+/***** Lights for present time *****/
 .present .indicator-light.am.light-on, 
-.present .indicator-light.pm.light-on, 
-.present .indicator-light.top, 
-.present .indicator-light.bottom, {
+.present .indicator-light.pm.light-on,
+.present .console-colon-lights .top,
+.present .console-colon-lights .bottom {
   background-color: #8AF250;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
 }
@@ -240,11 +285,46 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
+/***** Blink the hours minutes present time lights *****/
+.present .console-colon-lights .top,
+.present .console-colon-lights .bottom {
+  -webkit-animation: blinkPresentLights 2s step-start infinite;
+        animation: blinkPresentLights 2s step-start infinite;
+}
+@-webkit-keyframes blinkPresentLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #8AF250;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkPresentLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #8AF250;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
 
+/***** Lights for last-time-departed time *****/
 .last-time-departed .indicator-light.am.light-on, 
 .last-time-departed .indicator-light.pm.light-on, 
-.last-time-departed .indicator-light.top, 
-.last-time-departed .indicator-light.bottom, {
+.last-time-departed .console-colon-lights .top, 
+.last-time-departed .console-colon-lights .bottom, {
   background-color: #F4DF5C;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
 }
@@ -254,16 +334,39 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
-
-.indicator-light.top {
-  position: absolute;
-  bottom: 45px;
-  right: 3px;
+/***** Blink the hours minutes present time lights *****/
+.last-time-departed .console-colon-lights .top, 
+.last-time-departed .console-colon-lights .bottom, {
+  -webkit-animation: blinkLastTimeDepartedLights 2s step-start infinite;
+        animation: blinkLastTimeDepartedLights 2s step-start infinite;
 }
-.indicator-light.bottom { 
-  position: absolute;
-  right: 3px;
-  bottom: 20px;
+@-webkit-keyframes blinkLastTimeDepartedLights {
+  0% {
+    background-color: #330;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #F4DF5C;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
+  }
+  100% {
+    background-color: #330;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkLastTimeDepartedLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #F4DF5C;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
 }
 
 
