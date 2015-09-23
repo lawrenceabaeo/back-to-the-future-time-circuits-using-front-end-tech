@@ -82,15 +82,22 @@ body {
   border-bottom-style: inset;
   border-bottom-color: gray;
   border-radius: 3px;
-  
 }
-
-
 .individual-time-circuit-wrapper-area:after {
   content: "";
   display: block;
   padding-top: 21%;
 }
+.destination {
+  background-image: url("../img/mottled_metal_1.jpg");
+}
+.present {
+  background-image: url("../img/mottled_metal_2.jpg");
+}
+.last-time-departed {
+  background-image: url("../img/mottled_metal_3.jpg");
+}
+
 .individual-time-circuit-content {
 	position:  absolute;
 	top: 0;
