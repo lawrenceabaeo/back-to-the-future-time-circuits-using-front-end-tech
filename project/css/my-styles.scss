@@ -1,0 +1,393 @@
+/***** NOTES *****/
+// Ratio: 
+// http://alistapart.com/d/creating-intrinsic-ratios-for-video/example2.html
+// went with the mademyday one:
+// https://css-tricks.com/easier-aspect-ratio-elements/
+// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+
+// another technique: 
+// http://stackoverflow.com/questions/18296378/how-to-keep-a-div-contained-within-the-viewport-whilst-maintaining-aspect-ratio
+
+/***** SASS *****/
+@mixin debug {
+  border: 1px solid red;
+}
+
+
+/***** FONTS *****/
+@font-face {
+  // http://www.dafont.com/lcd-lcd-mono.font
+  // ok, this one's a little different
+  font-family: 'LCDM2B__'; 
+  src: url('../font/LCDM2B__.ttf');
+}
+// http://www.1001fonts.com/digital+clock-fonts.html
+// http://www.1001fonts.com/digital-7-font.html
+
+@font-face {
+  // http://fontsup.com/font/microgramma-d-ot-bold-extended.html
+  font-family: 'Microgramma-D-OT-Bold-Extended_30403';
+  src: url('../font/Microgramma-D-OT-Bold-Extended_30403.ttf');
+}
+
+// http://fontsup.com/font/microgramma-d-ot-medium-extended.html
+// Microgramma-D-OT-Medium-Extended_30404
+@font-face {
+  // http://fontsup.com/font/microgramma-d-ot-bold-extended.html
+  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  src: url('../font/Microgramma-D-OT-Medium-Extended_30404.ttf');
+}
+
+
+/***** *****/
+// https://css-tricks.com/international-box-sizing-awareness-day/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: table;
+}
+
+.overall-container {
+  // vertical centering
+  // from http://stackoverflow.com/a/17521229/4771469
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.individual-time-circuit-wrapper-area {
+  // NOTE: only need margin auto with a fixed width
+  margin-left: auto;
+  margin-right: auto;
+  // NOTE: only need margin pixels when using dynamic width
+  // margin-right: 10px;
+  // margin-left: 10px;
+  // min-width: 480px;
+  // max-width: 1000px;
+  width: 960px;
+  position: relative;
+  background-image: url("../img/Grunge_mottled_texture_insight_designs.jpg");
+  // Need to play with borders more, it's ok for now
+  box-sizing: content-box;
+  border-top-style: outset;
+  border-right-style: outset;
+  border-left-style: outset;
+  border-right-width: 5px;
+  border-bottom-style: inset;
+  border-bottom-color: gray;
+  border-radius: 3px;
+}
+.individual-time-circuit-wrapper-area:after {
+  content: "";
+  display: block;
+  padding-top: 21%;
+}
+.destination {
+  background-image: url("../img/mottled_metal_1.jpg");
+}
+.present {
+  background-image: url("../img/mottled_metal_2.jpg");
+}
+.last-time-departed {
+  background-image: url("../img/mottled_metal_3.jpg");
+}
+
+.individual-time-circuit-content {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.console-display {
+  display: inline-block;
+}
+
+.sticker-label, .footer-label, .am-label, .pm-label {
+  // font-family: 'Microgramma-D-OT-Bold-Extended_30403';
+  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+$reddish-label-color: #8e1a0a;
+
+.sticker-label {
+  display: inline-block;
+  background-color: $reddish-label-color;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1.3em;
+  margin-top: 17px;
+  // NOTE: the stickers are placed by hand in the movie and
+  // are visually not perfect, may need to introduce that here somehows
+}
+
+.footer-label {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+// For now, keep them even, but I eventually want to 
+// make the labels not align
+.destination .month, .present .month, .last-time-departed .month { margin-left: 50px;}
+.destination .day, .present .day, .last-time-departed .day { margin-left: 65px; }
+.destination .year, .present .year, .last-time-departed .year { margin-left: 125px; }
+.destination .hour, .present .hour, .last-time-departed .hour { margin-left: 145px; }
+.destination .min, .present .min, .last-time-departed .min { margin-left: 65px; }
+.destination .footer-label { 
+  margin-left: 300px;
+  width: 330px;
+}
+.present .footer-label { 
+  margin-left: 300px;
+  width: 290px;
+}
+
+.last-time-departed .footer-label { 
+  margin-left: 250px;
+  width: 400px;
+}
+
+.console-month { margin-left: 23px; }
+.console-day { margin-left: 14px; }
+.console-year { margin-left: 25px; }
+
+/***** AM PM stuff *****/
+.console-am-pm { 
+  position: relative;
+  width: 49px;
+}
+.am-label, .pm-label {
+  position: absolute;
+  left: -8px;
+  background-color: $reddish-label-color;
+  color: white;
+  font-size: 1.5em;
+  line-height: 24px;  
+}
+.am-label {
+ bottom: 75px; 
+}
+.pm-label {
+ bottom: 24px; 
+}
+
+/***** Indicator light (LED style) stuff ****/
+// http://phantombear.net/omg-css-leds/
+.indicator-light {
+  $indicator-light-width: 17px;
+  height: $indicator-light-width;
+  width: $indicator-light-width;
+  border-radius: 50%;
+  margin-right: 3px; // why is this here?
+}
+.indicator-light.am {
+  position: absolute;
+  bottom: 55px;
+  left: 5px;
+}
+.indicator-light.pm {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.console-colon-lights {
+  position: relative;
+  width: 19px;
+}
+.console-colon-lights .top {
+  position: absolute;
+  bottom: 45px;
+  right: 3px;
+}
+.console-colon-lights .bottom { 
+  position: absolute;
+  right: 3px;
+  bottom: 20px;
+}
+
+
+/***** Lights for destination time *****/
+.destination .indicator-light.am.light-on,
+.destination .indicator-light.pm.light-on, 
+.destination .console-colon-lights .top, 
+.destination .console-colon-lights .bottom {
+  background-color: #EFF288;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px;
+}
+.destination .indicator-light.am.light-off,
+.destination .indicator-light.pm.light-off {
+  background-color: #3E2917;
+  // background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
+}
+/***** Blink the hours minutes destination lights *****/
+.destination .console-colon-lights .top, 
+.destination .console-colon-lights .bottom {
+  -webkit-animation: blinkDestinationLights 2s step-start infinite;
+          animation: blinkDestinationLights 2s step-start infinite;
+}
+@-webkit-keyframes blinkDestinationLights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
+  }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkDestinationLights {
+  0% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #EFF288;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
+  }
+  100% {
+    background-color: #3E2917;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+
+/***** Lights for present time *****/
+.present .indicator-light.am.light-on, 
+.present .indicator-light.pm.light-on,
+.present .console-colon-lights .top,
+.present .console-colon-lights .bottom {
+  background-color: #8AF250;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
+}
+.present .indicator-light.am.light-off, 
+.present .indicator-light.pm.light-off {
+  background-color: #0E1510;
+  background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
+}
+/***** Blink the hours minutes present time lights *****/
+.present .console-colon-lights .top,
+.present .console-colon-lights .bottom {
+  -webkit-animation: blinkPresentLights 2s step-start infinite;
+        animation: blinkPresentLights 2s step-start infinite;
+}
+@-webkit-keyframes blinkPresentLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #8AF250;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkPresentLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #8AF250;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+
+/***** Lights for last-time-departed time *****/
+.last-time-departed .indicator-light.am.light-on, 
+.last-time-departed .indicator-light.pm.light-on, 
+.last-time-departed .console-colon-lights .top, 
+.last-time-departed .console-colon-lights .bottom, {
+  background-color: #F4DF5C;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
+}
+.last-time-departed .indicator-light.am.light-off, 
+.last-time-departed .indicator-light.pm.light-off {
+  background-color: #330;
+  // box-shadow: inset X Y blur color
+  box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
+}
+/***** Blink the hours minutes present time lights *****/
+.last-time-departed .console-colon-lights .top, 
+.last-time-departed .console-colon-lights .bottom, {
+  -webkit-animation: blinkLastTimeDepartedLights 2s step-start infinite;
+        animation: blinkLastTimeDepartedLights 2s step-start infinite;
+}
+@-webkit-keyframes blinkLastTimeDepartedLights {
+  0% {
+    background-color: #330;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #F4DF5C;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
+  }
+  100% {
+    background-color: #330;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+@keyframes blinkLastTimeDepartedLights {
+  0% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+  50% { 
+    background-color: #F4DF5C;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
+  }
+  100% {
+    background-color: #0E1510;
+    box-shadow: inset -1px 2px 3px #ababab; 
+  }
+}
+
+
+.lcd {
+  background-color: black;
+  border-style:inset;
+  color: red;
+  font-family: 'LCDM2B__';
+  font-size: 6em;
+  // NOTE: These numbers will likely change
+  // if a bezel is introduced
+  padding-top: 12px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: 11px;
+  margin-right: 10px;
+  line-height: 80px;
+  
+}
+
+.destination .lcd { color: #FF6410; }
+.present .lcd { color: #67FC42; }
+.last-time-departed .lcd { color: #F4CE26 ; }
