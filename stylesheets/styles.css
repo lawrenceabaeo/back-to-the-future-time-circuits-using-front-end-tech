@@ -1,4 +1,9 @@
+/* 
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+*/
+
+/***** use the following font instead: *****/
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
 body {
   padding:50px;
