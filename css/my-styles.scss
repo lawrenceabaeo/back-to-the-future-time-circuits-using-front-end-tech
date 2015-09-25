@@ -50,6 +50,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'microgramma_d_otMdEx';
+    src: url('../font/microgramma-d-ot-medium-extended_30404-webfont.eot');
+    src: url('../font/microgramma-d-ot-medium-extended_30404-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/microgramma-d-ot-medium-extended_30404-webfont.woff') format('woff'),
+         url('../font/microgramma-d-ot-medium-extended_30404-webfont.ttf') format('truetype'),
+         url('../font/microgramma-d-ot-medium-extended_30404-webfont.svg#microgramma_d_otMdEx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /***** *****/
 // https://css-tricks.com/international-box-sizing-awareness-day/
 *, *:before, *:after {
@@ -123,7 +135,8 @@ body {
 
 .sticker-label, .footer-label, .am-label, .pm-label {
   // font-family: 'Microgramma-D-OT-Bold-Extended_30403';
-  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  // font-family: 'Microgramma-D-OT-Medium-Extended_30404';
+  font-family: 'microgramma_d_otMdEx';
   font-weight: 600;
   letter-spacing: 2px;
 }
