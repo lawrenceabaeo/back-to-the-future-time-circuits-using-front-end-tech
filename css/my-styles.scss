@@ -1,13 +1,3 @@
-/***** NOTES *****/
-// Ratio: 
-// http://alistapart.com/d/creating-intrinsic-ratios-for-video/example2.html
-// went with the mademyday one:
-// https://css-tricks.com/easier-aspect-ratio-elements/
-// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-
-// another technique: 
-// http://stackoverflow.com/questions/18296378/how-to-keep-a-div-contained-within-the-viewport-whilst-maintaining-aspect-ratio
-
 /***** SASS *****/
 @mixin debug {
   border: 1px solid red;
@@ -16,29 +6,8 @@
 
 /***** FONTS *****/
 @font-face {
-  // http://www.dafont.com/lcd-lcd-mono.font
-  // ok, this one's a little different
-  font-family: 'LCDM2B__'; 
-  src: url('../font/LCDM2B__.ttf');
-}
-// http://www.1001fonts.com/digital+clock-fonts.html
-// http://www.1001fonts.com/digital-7-font.html
-
-@font-face {
-  // http://fontsup.com/font/microgramma-d-ot-bold-extended.html
-  font-family: 'Microgramma-D-OT-Bold-Extended_30403';
-  src: url('../font/Microgramma-D-OT-Bold-Extended_30403.ttf');
-}
-
-// http://fontsup.com/font/microgramma-d-ot-medium-extended.html
-// Microgramma-D-OT-Medium-Extended_30404
-@font-face {
-  // http://fontsup.com/font/microgramma-d-ot-bold-extended.html
-  font-family: 'Microgramma-D-OT-Medium-Extended_30404';
-  src: url('../font/Microgramma-D-OT-Medium-Extended_30404.ttf');
-}
-
-@font-face {
+    // http://www.dafont.com/lcd-lcd-mono.font
+    // The font was then processed with fontsquirrel generator
     font-family: 'lcdmono2bold';
     src: url('../font/lcdm2b__-webfont.eot');
     src: url('../font/lcdm2b__-webfont.eot?#iefix') format('embedded-opentype'),
@@ -51,6 +20,9 @@
 }
 
 @font-face {
+    // http://fontsup.com/font/microgramma-d-ot-medium-extended.html
+    // Microgramma-D-OT-Medium-Extended_30404
+    // The font was then processed with fontsquirrel generator
     font-family: 'microgramma_d_otMdEx';
     src: url('../font/microgramma-d-ot-medium-extended_30404-webfont.eot');
     src: url('../font/microgramma-d-ot-medium-extended_30404-webfont.eot?#iefix') format('embedded-opentype'),
@@ -95,7 +67,6 @@ body {
   // max-width: 1000px;
   width: 960px;
   position: relative;
-  background-image: url("../img/Grunge_mottled_texture_insight_designs.jpg");
   // Need to play with borders more, it's ok for now
   box-sizing: content-box;
   border-top-style: outset;
@@ -134,8 +105,6 @@ body {
 }
 
 .sticker-label, .footer-label, .am-label, .pm-label {
-  // font-family: 'Microgramma-D-OT-Bold-Extended_30403';
-  // font-family: 'Microgramma-D-OT-Medium-Extended_30404';
   font-family: 'microgramma_d_otMdEx';
   font-weight: 600;
   letter-spacing: 2px;
@@ -255,7 +224,6 @@ $reddish-label-color: #8e1a0a;
 .destination .indicator-light.am.light-off,
 .destination .indicator-light.pm.light-off {
   background-color: #3E2917;
-  // background-color: #330;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
@@ -398,7 +366,6 @@ $reddish-label-color: #8e1a0a;
   background-color: black;
   border-style:inset;
   color: red;
-  // font-family: 'LCDM2B__';
   font-family: 'lcdmono2bold';
   font-size: 6em;
   // NOTE: These numbers will likely change
