@@ -229,8 +229,8 @@ body {
 /* line 232, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .console-colon-lights .top,
 .destination .console-colon-lights .bottom {
-  -webkit-animation: blinkDestinationLights 2s step-start infinite;
-  animation: blinkDestinationLights 2s step-start infinite; }
+  -webkit-animation: blinkDestinationLights 1s step-start infinite;
+  animation: blinkDestinationLights 1s step-start infinite; }
 
 @-webkit-keyframes blinkDestinationLights {
   0% {
@@ -274,8 +274,8 @@ body {
 /* line 282, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .console-colon-lights .top,
 .present .console-colon-lights .bottom {
-  -webkit-animation: blinkPresentLights 2s step-start infinite;
-  animation: blinkPresentLights 2s step-start infinite; }
+  -webkit-animation: blinkPresentLights 1s step-start infinite;
+  animation: blinkPresentLights 1s step-start infinite; }
 
 @-webkit-keyframes blinkPresentLights {
   0% {
@@ -318,8 +318,8 @@ body {
 /* line 331, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .console-colon-lights .top,
 .last-time-departed .console-colon-lights .bottom {
-  -webkit-animation: blinkLastTimeDepartedLights 2s step-start infinite;
-  animation: blinkLastTimeDepartedLights 2s step-start infinite; }
+  -webkit-animation: blinkLastTimeDepartedLights 1s step-start infinite;
+  animation: blinkLastTimeDepartedLights 1s step-start infinite; }
 
 @-webkit-keyframes blinkLastTimeDepartedLights {
   0% {
