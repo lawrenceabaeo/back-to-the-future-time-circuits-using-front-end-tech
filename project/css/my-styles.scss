@@ -38,6 +38,17 @@
   src: url('../font/Microgramma-D-OT-Medium-Extended_30404.ttf');
 }
 
+@font-face {
+    font-family: 'lcdmono2bold';
+    src: url('../font/lcdm2b__-webfont.eot');
+    src: url('../font/lcdm2b__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lcdm2b__-webfont.woff2') format('woff2'),
+         url('../font/lcdm2b__-webfont.woff') format('woff'),
+         url('../font/lcdm2b__-webfont.ttf') format('truetype'),
+         url('../font/lcdm2b__-webfont.svg#lcdmono2bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /***** *****/
 // https://css-tricks.com/international-box-sizing-awareness-day/
@@ -374,7 +385,8 @@ $reddish-label-color: #8e1a0a;
   background-color: black;
   border-style:inset;
   color: red;
-  font-family: 'LCDM2B__';
+  // font-family: 'LCDM2B__';
+  font-family: 'lcdmono2bold';
   font-size: 6em;
   // NOTE: These numbers will likely change
   // if a bezel is introduced
