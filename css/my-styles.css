@@ -384,4 +384,42 @@ body {
 .last-time-departed .lcd {
   color: #F4CE26; }
 
+/* line 420, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.over {
+  z-index: 101;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  -webkit-animation-name: lightUp;
+  animation-name: lightUp;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s; }
+
+@keyframes lightUp {
+  0% {
+    background: #000000; }
+  30% {
+    background: #000000; }
+  60% {
+    background: #000000; }
+  100% {
+    background: transparent; } }
+
+@-webkit-keyframes lightUp {
+  0% {
+    background: #000000; }
+  30% {
+    background: #000000; }
+  60% {
+    background: #000000; }
+  100% {
+    background: transparent; } }
+
 /*# sourceMappingURL=my-styles.css.map */

@@ -416,3 +416,55 @@ $reddish-label-color: #8e1a0a;
 .destination .lcd { color: #FF6410; }
 .present .lcd { color: #67FC42; }
 .last-time-departed .lcd { color: #F4CE26 ; }
+
+.over {
+  z-index: 101;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  // I copied the animation from 
+  // one of my old projects
+  -webkit-animation-name: lightUp;
+  animation-name: lightUp;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@keyframes lightUp {
+  0% {
+    background: #000000;
+  }
+  30% {
+    background: #000000;
+  }
+  60% {
+    // background: #FFFFFF;
+    background: #000000;
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+@-webkit-keyframes lightUp {
+  0% {
+    background: #000000;
+  }
+  30% {
+    background: #000000;
+  }
+  60% {
+    // background: #FFFFFF;
+    background: #000000;
+  }
+  100% {
+    background: transparent;
+  }
+}
