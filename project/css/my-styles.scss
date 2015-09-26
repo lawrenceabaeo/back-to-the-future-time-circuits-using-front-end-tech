@@ -451,3 +451,31 @@ $reddish-label-color: #8e1a0a;
     background: transparent;
   }
 }
+
+// **** Faded eights *****/
+// Making these NOT uniform
+.faded-eights {
+  position: absolute;
+  opacity: .15;
+}
+.destination .console-day .faded-eights {
+  opacity: .25;
+}
+.destination .console-year .faded-eights {
+  opacity: .3;
+}
+.destination .console-hour .faded-eights {
+  opacity: .25;
+}
+.present .console-year .faded-eights {
+  opacity: .2;
+}
+.last-time-departed .console-year .faded-eights {
+  opacity: .2;
+}
+.last-time-departed .console-hour .faded-eights {
+  opacity: .2;
+}
+.last-time-departed .console-min .faded-eights {
+  opacity: .25;
+}

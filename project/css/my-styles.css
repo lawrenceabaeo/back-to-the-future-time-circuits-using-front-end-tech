@@ -415,4 +415,37 @@ body {
   100% {
     background: transparent; } }
 
+/* line 455, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.faded-eights {
+  position: absolute;
+  opacity: .15; }
+
+/* line 459, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.destination .console-day .faded-eights {
+  opacity: .25; }
+
+/* line 462, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.destination .console-year .faded-eights {
+  opacity: .3; }
+
+/* line 465, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.destination .console-hour .faded-eights {
+  opacity: .25; }
+
+/* line 468, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.present .console-year .faded-eights {
+  opacity: .2; }
+
+/* line 471, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.last-time-departed .console-year .faded-eights {
+  opacity: .2; }
+
+/* line 474, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.last-time-departed .console-hour .faded-eights {
+  opacity: .2; }
+
+/* line 477, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+.last-time-departed .console-min .faded-eights {
+  opacity: .25; }
+
 /*# sourceMappingURL=my-styles.css.map */

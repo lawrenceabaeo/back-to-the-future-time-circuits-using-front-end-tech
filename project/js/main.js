@@ -20,11 +20,11 @@ function presentTimeDisplayText() {
   var year = currentDate.format("YYYY");
   var hour = currentDate.format("hh");
   var min = currentDate.format("mm");
-  $(".present .console-month").text(mon);
-  $(".present .console-day").text(day);
-  $(".present .console-year").text(year);
-  $(".present .console-hour").text(hour);
-  $(".present .console-minutes").text(min);
+  $(".present .console-month span").text(mon);
+  $(".present .console-day span").text(day);
+  $(".present .console-year span").text(year);
+  $(".present .console-hour span").text(hour);
+  $(".present .console-minutes span").text(min);
   setPresentTimeAMorPM(currentDate);
 }
 
