@@ -14,27 +14,34 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'digital-7_monoitalic';
+  src: url("../font/digital-7_mono_italic-webfont.eot");
+  src: url("../font/digital-7_mono_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/digital-7_mono_italic-webfont.woff2") format("woff2"), url("../font/digital-7_mono_italic-webfont.woff") format("woff"), url("../font/digital-7_mono_italic-webfont.ttf") format("truetype"), url("../font/digital-7_mono_italic-webfont.svg#digital-7_monoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /***** *****/
-/* line 39, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 52, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 *, *:before, *:after {
   box-sizing: border-box; }
 
-/* line 43, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 56, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 body, html {
   background-color: black;
   height: 100%;
   width: 100%; }
 
-/* line 48, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 61, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 body {
   display: table; }
 
-/* line 52, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 65, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .overall-container {
   display: table-cell;
   vertical-align: middle; }
 
-/* line 59, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 72, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-wrapper-area {
   margin-left: auto;
   margin-right: auto;
@@ -49,25 +56,25 @@ body {
   border-bottom-color: gray;
   border-radius: 3px; }
 
-/* line 80, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 93, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-wrapper-area:after {
   content: "";
   display: block;
   padding-top: 21%; }
 
-/* line 85, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 98, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination {
   background-image: url("../img/mottled_metal_1.jpg"); }
 
-/* line 88, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 101, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present {
   background-image: url("../img/mottled_metal_2.jpg"); }
 
-/* line 91, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 104, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed {
   background-image: url("../img/mottled_metal_3.jpg"); }
 
-/* line 95, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 108, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .individual-time-circuit-content {
   position: absolute;
   top: 0;
@@ -75,17 +82,17 @@ body {
   bottom: 0;
   right: 0; }
 
-/* line 103, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 116, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-display {
   display: inline-block; }
 
-/* line 107, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 120, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .sticker-label, .footer-label, .am-label, .pm-label {
   font-family: 'microgramma_d_otMdEx';
   font-weight: 600;
   letter-spacing: 2px; }
 
-/* line 115, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 128, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .sticker-label {
   display: inline-block;
   background-color: #8e1a0a;
@@ -95,7 +102,7 @@ body {
   font-size: 1.3em;
   margin-top: 17px; }
 
-/* line 127, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 140, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .footer-label {
   background-color: black;
   color: white;
@@ -103,60 +110,60 @@ body {
   text-align: center;
   font-size: 1.5em; }
 
-/* line 137, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 150, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .month, .present .month, .last-time-departed .month {
   margin-left: 50px; }
 
-/* line 138, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 151, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .day, .present .day, .last-time-departed .day {
   margin-left: 65px; }
 
-/* line 139, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 152, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .year, .present .year, .last-time-departed .year {
   margin-left: 125px; }
 
-/* line 140, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 153, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .hour, .present .hour, .last-time-departed .hour {
   margin-left: 145px; }
 
-/* line 141, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 154, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .min, .present .min, .last-time-departed .min {
   margin-left: 65px; }
 
-/* line 142, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 155, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .footer-label {
   margin-left: 300px;
   width: 330px; }
 
-/* line 146, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 159, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .footer-label {
   margin-left: 300px;
   width: 290px; }
 
-/* line 151, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 164, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .footer-label {
   margin-left: 250px;
   width: 400px; }
 
-/* line 156, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 169, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-month {
   margin-left: 23px; }
 
-/* line 157, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 170, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-day {
   margin-left: 14px; }
 
-/* line 158, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 171, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-year {
   margin-left: 25px; }
 
 /***** AM PM stuff *****/
-/* line 161, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 174, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-am-pm {
   position: relative;
   width: 49px; }
 
-/* line 165, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 178, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .am-label, .pm-label {
   position: absolute;
   left: -8px;
@@ -165,53 +172,53 @@ body {
   font-size: 1.5em;
   line-height: 24px; }
 
-/* line 173, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 186, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .am-label {
   bottom: 75px; }
 
-/* line 176, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 189, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .pm-label {
   bottom: 24px; }
 
 /***** Indicator light (LED style) stuff ****/
-/* line 182, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 195, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .indicator-light {
   height: 17px;
   width: 17px;
   border-radius: 50%;
   margin-right: 3px; }
 
-/* line 189, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 202, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .indicator-light.am {
   position: absolute;
   bottom: 55px;
   left: 5px; }
 
-/* line 194, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 207, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .indicator-light.pm {
   position: absolute;
   bottom: 5px;
   left: 5px; }
 
-/* line 200, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 213, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-colon-lights {
   position: relative;
   width: 19px; }
 
-/* line 204, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 217, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-colon-lights .top {
   position: absolute;
   bottom: 45px;
   right: 3px; }
 
-/* line 209, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 222, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .console-colon-lights .bottom {
   position: absolute;
   right: 3px;
   bottom: 20px; }
 
 /***** Lights for destination time *****/
-/* line 220, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 233, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .indicator-light.am.light-on,
 .destination .indicator-light.pm.light-on,
 .destination .console-colon-lights .top,
@@ -219,14 +226,14 @@ body {
   background-color: #EFF288;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; }
 
-/* line 225, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 238, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .indicator-light.am.light-off,
 .destination .indicator-light.pm.light-off {
   background-color: #3E2917;
   box-shadow: inset -1px 2px 3px #ababab; }
 
 /***** Blink the hours minutes destination lights *****/
-/* line 232, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 245, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .console-colon-lights .top,
 .destination .console-colon-lights .bottom {
   -webkit-animation: blinkDestinationLights 1s step-start infinite;
@@ -255,7 +262,7 @@ body {
     box-shadow: inset -1px 2px 3px #ababab; } }
 
 /***** Lights for present time *****/
-/* line 269, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 282, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .indicator-light.am.light-on,
 .present .indicator-light.pm.light-on,
 .present .console-colon-lights .top,
@@ -263,7 +270,7 @@ body {
   background-color: #8AF250;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px; }
 
-/* line 274, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 287, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .indicator-light.am.light-off,
 .present .indicator-light.pm.light-off {
   background-color: #0E1510;
@@ -271,7 +278,7 @@ body {
   box-shadow: inset -1px 2px 3px #ababab; }
 
 /***** Blink the hours minutes present time lights *****/
-/* line 282, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 295, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .console-colon-lights .top,
 .present .console-colon-lights .bottom {
   -webkit-animation: blinkPresentLights 1s step-start infinite;
@@ -300,7 +307,7 @@ body {
     box-shadow: inset -1px 2px 3px #ababab; } }
 
 /***** Lights for last-time-departed time *****/
-/* line 319, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 332, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .indicator-light.am.light-on,
 .last-time-departed .indicator-light.pm.light-on,
 .last-time-departed .console-colon-lights .top,
@@ -308,14 +315,14 @@ body {
   background-color: #F4DF5C;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px; }
 
-/* line 324, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 337, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .indicator-light.am.light-off,
 .last-time-departed .indicator-light.pm.light-off {
   background-color: #330;
   box-shadow: inset -1px 2px 3px #ababab; }
 
 /***** Blink the hours minutes present time lights *****/
-/* line 331, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 344, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .console-colon-lights .top,
 .last-time-departed .console-colon-lights .bottom {
   -webkit-animation: blinkLastTimeDepartedLights 1s step-start infinite;
@@ -343,34 +350,34 @@ body {
     background-color: #0E1510;
     box-shadow: inset -1px 2px 3px #ababab; } }
 
-/* line 365, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 378, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .lcd {
   background-color: black;
   border-style: inset;
   color: red;
-  font-family: 'lcdmono2bold';
-  font-size: 6em;
-  padding-top: 12px;
-  padding-bottom: 0px;
+  font-family: 'digital-7_monoitalic';
+  font-size: 6.9em;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
   margin-top: 11px;
   margin-right: 10px;
   line-height: 80px; }
 
-/* line 383, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 399, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .destination .lcd {
   color: #FF6410; }
 
-/* line 384, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 400, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .present .lcd {
   color: #67FC42; }
 
-/* line 385, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 401, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .last-time-departed .lcd {
   color: #F4CE26; }
 
-/* line 387, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
+/* line 403, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .over {
   z-index: 101;
   position: absolute;
