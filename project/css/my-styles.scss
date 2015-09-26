@@ -34,6 +34,19 @@
 
 }
 
+@font-face {
+    font-family: 'digital-7_monoitalic';
+    src: url('../font/digital-7_mono_italic-webfont.eot');
+    src: url('../font/digital-7_mono_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/digital-7_mono_italic-webfont.woff2') format('woff2'),
+         url('../font/digital-7_mono_italic-webfont.woff') format('woff'),
+         url('../font/digital-7_mono_italic-webfont.ttf') format('truetype'),
+         url('../font/digital-7_mono_italic-webfont.svg#digital-7_monoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /***** *****/
 // https://css-tricks.com/international-box-sizing-awareness-day/
 *, *:before, *:after {
@@ -366,18 +379,21 @@ $reddish-label-color: #8e1a0a;
   background-color: black;
   border-style:inset;
   color: red;
-  font-family: 'lcdmono2bold';
-  font-size: 6em;
+  // font-family: 'lcdmono2bold';
+  font-family: 'digital-7_monoitalic';
+  // font-size: 6em; // for lcdmono2bold
+  font-size: 6.9em; // for lcdmono2bold
   // NOTE: These numbers will likely change
   // if a bezel is introduced
-  padding-top: 12px;
-  padding-bottom: 0px;
+  // padding-top: 12px; // when used with lcdmono2bold
+  // padding-bottom: 0px; // when used with lcdmono2bold
+  padding-top: 5px; // when used with digital-7_monoitalic
+  padding-bottom: 5px; // when used with digital-7_monoitalic
   padding-right: 5px;
   padding-left: 5px;
   margin-top: 11px;
   margin-right: 10px;
   line-height: 80px;
-  
 }
 
 .destination .lcd { color: #FF6410; }
