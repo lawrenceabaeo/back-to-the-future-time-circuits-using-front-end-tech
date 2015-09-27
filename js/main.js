@@ -24,7 +24,7 @@ function presentTimeDisplayText() {
   $(".present .console-day span").text(day);
   $(".present .console-year span").text(year);
   $(".present .console-hour span").text(hour);
-  $(".present .console-minutes span").text(min);
+  $(".present .console-min span").text(min);
   setPresentTimeAMorPM(currentDate);
 }
 
