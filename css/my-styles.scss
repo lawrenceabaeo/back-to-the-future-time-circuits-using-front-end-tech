@@ -78,6 +78,7 @@ body {
   // margin-left: 10px;
   // min-width: 480px;
   // max-width: 1000px;
+  height: 195px;
   width: 960px;
   position: relative;
   // Need to play with borders more, it's ok for now
@@ -123,6 +124,8 @@ body {
   letter-spacing: 2px;
 }
 
+.footer-label { letter-spacing: 3px; }
+
 $reddish-label-color: #8e1a0a;
 
 .sticker-label {
@@ -154,7 +157,7 @@ $reddish-label-color: #8e1a0a;
 .destination .min, .present .min, .last-time-departed .min { margin-left: 65px; }
 .destination .footer-label { 
   margin-left: 300px;
-  width: 330px;
+  width: 350px;
 }
 .present .footer-label { 
   margin-left: 300px;
@@ -166,7 +169,18 @@ $reddish-label-color: #8e1a0a;
   width: 400px;
 }
 
-.console-month { margin-left: 23px; }
+.console-month { 
+  margin-left: 23px;
+  text-align: center;
+  width: 186px;
+}
+.console-month .faded-eights {
+  // note: faded-eights is absolute, so had to 
+  // do some eyeballing to get this right
+  width: 170px;
+  text-align: center;
+}
+.console-day, .console-hour, .console-min { width: 115px; }
 .console-day { margin-left: 14px; }
 .console-year { margin-left: 25px; }
 
@@ -174,6 +188,8 @@ $reddish-label-color: #8e1a0a;
 .console-am-pm { 
   position: relative;
   width: 49px;
+  // margin-right: 100px;
+  margin-right: -5px;
 }
 .am-label, .pm-label {
   position: absolute;
@@ -181,7 +197,7 @@ $reddish-label-color: #8e1a0a;
   background-color: $reddish-label-color;
   color: white;
   font-size: 1.5em;
-  line-height: 24px;  
+  line-height: 24px;
 }
 .am-label {
  bottom: 75px; 
@@ -382,7 +398,7 @@ $reddish-label-color: #8e1a0a;
   // font-family: 'lcdmono2bold';
   font-family: 'digital-7_monoitalic';
   // font-size: 6em; // for lcdmono2bold
-  font-size: 6.9em; // for lcdmono2bold
+  font-size: 6.7em;
   // NOTE: These numbers will likely change
   // if a bezel is introduced
   // padding-top: 12px; // when used with lcdmono2bold
@@ -393,7 +409,7 @@ $reddish-label-color: #8e1a0a;
   padding-left: 5px;
   margin-top: 11px;
   margin-right: 10px;
-  line-height: 80px;
+  line-height: 73px;
 }
 
 .destination .lcd { color: #FF6410; }
