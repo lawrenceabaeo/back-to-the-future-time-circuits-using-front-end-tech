@@ -370,7 +370,7 @@ body {
 /* line 394, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/my-styles.scss */
 .lcd {
   background-color: black;
-  border-style: inset;
+  border-radius: 4px;
   color: red;
   font-family: 'digital-7_monoitalic';
   font-size: 6.7em;
