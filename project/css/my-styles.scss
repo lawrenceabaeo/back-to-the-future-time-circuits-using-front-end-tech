@@ -242,7 +242,24 @@ $reddish-label-color: #8e1a0a;
 }
 
 
-/***** Lights for destination time *****/
+/***** mixin animation for blinking hh:mm lights *****/
+@mixin blinky-animation($off-bulb-color, $off-bulb-highlight-color, $on-bulb-color, $on-bulb-shadow-color) {
+  0% {
+    background-color: $off-bulb-color;
+    box-shadow: inset -1px 2px 3px $off-bulb-highlight-color;
+  }
+  50% {
+    background-color: $on-bulb-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset $on-bulb-shadow-color 0 -1px 4.5px, $on-bulb-color 0 2px 12px;
+  }
+  100% {
+    background-color: $off-bulb-color;
+    box-shadow: inset -1px 2px 3px $off-bulb-highlight-color;
+  }
+}
+
+
+/***** destination am pm dot lights *****/
 .destination .indicator-light.am.light-on,
 .destination .indicator-light.pm.light-on, 
 .destination .console-colon-lights .top, 
@@ -256,42 +273,24 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
-/***** Blink the hours minutes destination lights *****/
+/***** destination hh:mm lights *****/
 .destination .console-colon-lights .top, 
 .destination .console-colon-lights .bottom {
-  -webkit-animation: blinkDestinationLights 1s step-start infinite;
-          animation: blinkDestinationLights 1s step-start infinite;
+  -webkit-animation: blink-destination-lights 1s step-start infinite;
+          animation: blink-destination-lights 1s step-start infinite;
 }
-@-webkit-keyframes blinkDestinationLights {
-  0% {
-    background-color: #3E2917;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #EFF288;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
-  }
-  100% {
-    background-color: #3E2917;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+$destination-off-color: #3E2917;
+$destination-off-highlight-color: #ababab;
+$destination-on-color: #EFF288;
+$destination-on-shadow-color: #304701;
+@-webkit-keyframes blink-destination-lights {
+  @include blinky-animation($destination-off-color, $destination-off-highlight-color, $destination-on-color, $destination-on-shadow-color);
 }
-@keyframes blinkDestinationLights {
-  0% {
-    background-color: #3E2917;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #EFF288;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #EFF288 0 2px 12px; 
-  }
-  100% {
-    background-color: #3E2917;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+@keyframes blink-destination-lights {
+  @include blinky-animation($destination-off-color, $destination-off-highlight-color, $destination-on-color, $destination-on-shadow-color);
 }
 
-/***** Lights for present time *****/
+/***** present am pm dot lights *****/
 .present .indicator-light.am.light-on, 
 .present .indicator-light.pm.light-on,
 .present .console-colon-lights .top,
@@ -306,42 +305,25 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
-/***** Blink the hours minutes present time lights *****/
+/***** present hh:mm lights *****/
 .present .console-colon-lights .top,
 .present .console-colon-lights .bottom {
-  -webkit-animation: blinkPresentLights 1s step-start infinite;
-        animation: blinkPresentLights 1s step-start infinite;
+  -webkit-animation: blink-present-lights 1s step-start infinite;
+        animation: blink-present-lights 1s step-start infinite;
 }
-@-webkit-keyframes blinkPresentLights {
-  0% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #8AF250;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
-  }
-  100% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+$present-off-color: #0E1510;
+$present-off-highlight-color: #ababab;
+$present-on-color: #8AF250;
+$present-on-shadow-color: #304701;
+@-webkit-keyframes blink-present-lights {
+  @include blinky-animation($present-off-color, $present-off-highlight-color, $present-on-color, $present-on-shadow-color);
 }
-@keyframes blinkPresentLights {
-  0% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #8AF250;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #8AF250 0 2px 12px;
-  }
-  100% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+@keyframes blink-present-lights {
+  @include blinky-animation($present-off-color, $present-off-highlight-color, $present-on-color, $present-on-shadow-color);
 }
 
-/***** Lights for last-time-departed time *****/
+
+/***** last-time-departed am pm dot lights *****/
 .last-time-departed .indicator-light.am.light-on, 
 .last-time-departed .indicator-light.pm.light-on, 
 .last-time-departed .console-colon-lights .top, 
@@ -355,39 +337,21 @@ $reddish-label-color: #8e1a0a;
   // box-shadow: inset X Y blur color
   box-shadow: inset -1px 2px 3px #ababab; // Trying to create illusion of led
 }
-/***** Blink the hours minutes present time lights *****/
+/***** last-time-departed hh:mm lights *****/
 .last-time-departed .console-colon-lights .top, 
 .last-time-departed .console-colon-lights .bottom, {
-  -webkit-animation: blinkLastTimeDepartedLights 1s step-start infinite;
-        animation: blinkLastTimeDepartedLights 1s step-start infinite;
+  -webkit-animation: blink-last-lights 1s step-start infinite;
+        animation: blink-last-lights 1s step-start infinite;
 }
-@-webkit-keyframes blinkLastTimeDepartedLights {
-  0% {
-    background-color: #330;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #F4DF5C;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
-  }
-  100% {
-    background-color: #330;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+$last-off-color: #330;
+$last-off-highlight-color: #ababab;
+$last-on-color: #F4DF5C;
+$last-on-shadow-color: #304701;
+@-webkit-keyframes blink-last-lights {
+  @include blinky-animation($last-off-color, $last-off-highlight-color, $last-on-color, $last-on-shadow-color);
 }
-@keyframes blinkLastTimeDepartedLights {
-  0% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
-  50% { 
-    background-color: #F4DF5C;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 7px 1px, inset #304701 0 -1px 4.5px, #F4DF5C 0 2px 12px;
-  }
-  100% {
-    background-color: #0E1510;
-    box-shadow: inset -1px 2px 3px #ababab; 
-  }
+@keyframes blink-last-lights {
+  @include blinky-animation($last-off-color, $last-off-highlight-color, $last-on-color, $last-on-shadow-color);
 }
 
 
