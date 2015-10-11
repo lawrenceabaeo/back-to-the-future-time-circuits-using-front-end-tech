@@ -36,6 +36,7 @@ var altSheet = $("link[title='dark']");
 altSheet.prop('disabled', true);
 
 $('.brightness').on('click', function(event) {
+  this.blur(); // to remove the annoying blue highlight that usually stays behind in mac osx chrome
   if ( altSheet.prop('disabled') === true ) {
     altSheet.prop('disabled', false);
   } else {
