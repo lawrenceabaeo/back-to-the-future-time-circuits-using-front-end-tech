@@ -1,0 +1,37 @@
+/* line 2, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.destination {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mottled_metal_1.jpg"); }
+
+/* line 6, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.present {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mottled_metal_2.jpg"); }
+
+/* line 10, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.last-time-departed {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mottled_metal_3.jpg"); }
+
+/* line 15, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.destination .lcd {
+  color: #dc4d00; }
+
+/* line 16, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.present .lcd {
+  color: #2dd503; }
+
+/* line 17, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.last-time-departed .lcd {
+  color: #dcb50b; }
+
+/* line 20, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.sticker-label, .am-label, .pm-label {
+  background-color: #5e1107; }
+
+/* line 24, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.sticker-label, .footer-label, .am-label, .pm-label {
+  color: #cccccc; }
+
+/* line 28, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.brightness {
+  background-color: #777777; }
+
+/*# sourceMappingURL=darken1.css.map */
