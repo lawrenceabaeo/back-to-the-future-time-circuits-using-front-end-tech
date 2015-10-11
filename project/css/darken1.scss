@@ -1,0 +1,30 @@
+// Use this stylesheet to darken parts of the page
+.destination {
+  background: 
+    linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("../img/mottled_metal_1.jpg");
+}
+.present {
+    background: 
+    linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("../img/mottled_metal_2.jpg");
+}
+.last-time-departed {
+    background: 
+    linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ), url("../img/mottled_metal_3.jpg");
+}
+
+.destination .lcd{ color: darken(#FF6410, 10%); }
+.present .lcd{ color: darken(#67FC42, 20%); }
+.last-time-departed .lcd{ color: darken(#F4CE26, 10%); }
+
+$reddish-label-color: #8e1a0a;
+.sticker-label, .am-label, .pm-label {
+  background-color: darken($reddish-label-color, 10%);
+}
+
+.sticker-label, .footer-label, .am-label, .pm-label {
+  color: darken(white, 20%);
+}
+
+.brightness {
+  background-color: darken(#aaa, 20%);
+}

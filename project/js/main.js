@@ -31,3 +31,14 @@ function presentTimeDisplayText() {
 presentTimeDisplayText();
 
 setInterval(presentTimeDisplayText, 5000);
+
+var altSheet = $("link[title='dark']");
+altSheet.prop('disabled', true);
+
+$('.brightness').on('click', function(event) {
+  if ( altSheet.prop('disabled') === true ) {
+    altSheet.prop('disabled', false);
+  } else {
+    altSheet.prop('disabled', true);
+  }
+});
