@@ -141,15 +141,18 @@ body {
   height: 195px;
   width: 960px;
   position: relative;
-  // Need to play with borders more, it's ok for now
   box-sizing: content-box;
-  border-top-style: outset;
-  border-right-style: outset;
-  border-left-style: outset;
-  border-right-width: 5px;
-  border-bottom-style: inset;
-  border-bottom-color: gray;
-  border-radius: 3px;
+  /** border stuff **/
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #CCC;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-style: groove;
+  border-bottom-width: 2px;
+  border-bottom-color: #323232;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .individual-time-circuit-wrapper-area:after {
   content: "";
