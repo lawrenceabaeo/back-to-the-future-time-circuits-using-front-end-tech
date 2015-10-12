@@ -34,4 +34,9 @@
 .brightness {
   background-color: #777777; }
 
+/* line 32, /Users/lawrenceabaeo/code/back-to-the-future-time-circuits-using-front-end-tech/css/darken1.scss */
+.individual-time-circuit-wrapper-area {
+  border-top-color: #737373;
+  border-bottom-color: #000000; }
+
 /*# sourceMappingURL=darken1.css.map */
